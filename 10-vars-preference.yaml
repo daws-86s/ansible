@@ -17,7 +17,8 @@
       msg: "Name: {{ NAME }}"
 
 # 1. args or command line
-# 2. from prompt
+# 2. from task
 # 3. files
 # 4. prompt
 # 5. play level
+# 6. inventory
