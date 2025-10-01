@@ -1,8 +1,8 @@
 - name: vars preference
   hosts: local
   connection: local
-  vars:
-    NAME: from play level
+  # vars:
+  #   NAME: from play level
   # vars_files:
   # - course.yaml
   # vars_prompt:
@@ -20,3 +20,4 @@
 # 2. from prompt
 # 3. files
 # 4. prompt
+# 5. play level
