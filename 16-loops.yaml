@@ -1,0 +1,12 @@
+- name: Install pacakges
+  hosts: local
+  connection: local
+  tasks:
+  - name: print names
+    ansible.builtin.pacakge:
+      name: "{{ item }}"
+      state: latest
+    loop:
+    - nginx
+    - mysql
+    - zip
