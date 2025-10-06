@@ -60,9 +60,18 @@
       msg: "{{ ipaddress | ansible.utils.ipv4 }}"
 
   - name: grep for root
+    #ansible.builtin.command: cat /etc/passwd | grep root
     ansible.builtin.shell: cat /etc/passwd | grep root
     register: command_output
 
   - name: print the command_output
     ansible.builtin.debug:
       msg: "{{ command_output }}"
+
+  - name: redirect the output
+    ansible.builtin.command: ls -ltr > /tmp/output.txt
+    register: redirect_output
+
+  - name: print redirect_output
+    ansible.builtin.debug:
+      msg: "{{ redirect_output }}"
